@@ -1,0 +1,1 @@
+export { TabPin } from './pin';

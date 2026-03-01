@@ -1,0 +1,36 @@
+{
+    "name": "chrome-tab-pin",
+    "version": "0.1.0",
+    "description": "Tab pinning utilities for Chrome extensions — pin/unpin tabs, pin by domain, auto-pin rules, and pin state persistence for MV3.",
+    "author": "Zovo <hello@zovo.one>",
+    "license": "MIT",
+    "keywords": [
+        "chrome-extension",
+        "tab-pin",
+        "pin",
+        "tabs",
+        "manifest-v3",
+        "browser-extension",
+        "pinned",
+        "auto-pin"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theluckystrike/chrome-tab-pin.git"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "typescript": "^5.3.3"
+    }
+}
