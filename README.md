@@ -1,12 +1,33 @@
-# chrome-tab-pin — Tab Pinning for Extensions
-> **Built by [Zovo](https://zovo.one)** | `npm i chrome-tab-pin`
+# chrome-tab-pin
 
-Pin, unpin, toggle, domain-based pinning, and auto-pin rules.
+Pin and unpin tabs in Chrome extensions.
 
-```typescript
-import { TabPin } from 'chrome-tab-pin';
-await TabPin.pinActive();
-await TabPin.pinByDomain('github.com');
-TabPin.autoPinDomains(['gmail.com', 'slack.com']);
+## Overview
+
+chrome-tab-pin provides utilities to manage pinned tabs.
+
+## Installation
+
+```bash
+npm install chrome-tab-pin
 ```
-MIT License
+
+## Usage
+
+```javascript
+import { TabPin } from 'chrome-tab-pin';
+
+await TabPin.pin(tabId);
+await TabPin.unpin(tabId);
+const isPinned = await TabPin.isPinned(tabId);
+```
+
+## API
+
+- `pin(tabId)` - Pin tab
+- `unpin(tabId)` - Unpin tab
+- `isPinned(tabId)` - Check pinned state
+
+## License
+
+MIT
